@@ -21,4 +21,4 @@ Route::get('/', function () {
 //     echo 'Olá mundo!'; 
 // });
 
-Route::get('/series', [SeriesController::class, 'listarSeries']);
+Route::get('/series', [SeriesController::class, 'index']);

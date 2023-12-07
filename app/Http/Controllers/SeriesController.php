@@ -1,11 +1,16 @@
 <?php
 
+// php artisan make:controller SeriesController     essa classe de SeriesController foi criada atrav´s do comando artisan pelo cmd.
+// assim ela extende a classe controlller e cria automaticamente pra mim o controller
+//isso aumenta nossas possibilidades aumentando as funcionalidades do codigo
+
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 
-class SeriesController
+class SeriesController extends Controller
 {
-    public function listarSeries()
+    public function index() 
     {
         $series =[
             'Dark',
@@ -20,6 +25,6 @@ class SeriesController
             $html .= "<li>$serie</li>";
         }
         $html .= '</ul>';
-        echo $html;
+        echo $html;    
     }
 }
