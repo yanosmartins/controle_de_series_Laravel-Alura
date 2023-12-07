@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class SeriesController extends Controller
 {
-    public function index() 
+    public function index(Request $request) 
     {
         $series =[
             'Dark',
@@ -18,13 +18,11 @@ class SeriesController extends Controller
             'The Office',
             'Love Death and Robots'
         ];
-
         $html = '<ul>';
-
         foreach ($series as $serie){
             $html .= "<li>$serie</li>";
         }
         $html .= '</ul>';
-        echo $html;    
+        return ($html);
     }
 }
