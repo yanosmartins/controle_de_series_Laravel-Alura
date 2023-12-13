@@ -16,9 +16,15 @@ class SeriesController extends Controller
             'Dark',
             'Breaking Bed',
             'The Office',
-            'Love Death and Robots'
+            'Love Death and Robots',
+            'A > B'
         ];
         
-        return view(view:'listar-series') -> with('series', $series);
+        return view(view:'series.index') -> with('series', $series);
     }
+
+    public function create(){
+
+        return view(view:'series.create');
+    } 
 }
